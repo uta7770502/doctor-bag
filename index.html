@@ -1,20 +1,20 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f4faff"><title>お医者さんカバン</title><meta name="build" content="BUILD-20261007-2000"><link rel="stylesheet" href="style.css?v=5"></head><body><main class="app">
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f4faff"><title>お医者さんカバン</title><meta name="build" content="BUILD-20261007-2000"><link rel="stylesheet" href="style.css?v=6"></head><body><main class="app">
 <header><div></div><div class="title"><b>お医者さんカバン</b><i></i></div><button class="gear">⚙</button></header>
 <section id="home" class="screen active"><p class="lead">気になる症状を選んでください</p><button class="urgentHero" id="emergency"><span class="ambulance">✚</span><span><strong>今すぐ受診が必要な<br>緊急の症状がありますか？</strong><small>命に関わる可能性のある症状はこちら</small></span><em>緊急の症状<br>を確認する　›</em></button><div id="homeChoices" class="homegrid">
-<button class="homecard" data-key="head" data-label="頭・顔"><span class="ico">🤕</span><span>頭・顔</span></button>
-<button class="homecard" data-key="throat" data-label="のど・首"><span class="ico">🗣️</span><span>のど・首</span></button>
-<button class="homecard" data-key="chest" data-label="胸・呼吸"><span class="ico">🫁</span><span>胸・呼吸</span></button>
-<button class="homecard" data-key="abdomen" data-label="おなか・消化器"><span class="ico">◉</span><span>おなか・消化器</span></button>
-<button class="homecard" data-key="skin" data-label="皮膚"><span class="ico">✋</span><span>皮膚</span></button>
-<button class="homecard" data-key="back" data-label="骨・関節・筋肉"><span class="ico">🦴</span><span>骨・関節・筋肉</span></button>
-<button class="homecard" data-key="uro" data-label="泌尿器・生殖器"><span class="ico">⚥</span><span>泌尿器・生殖器</span></button>
-<button class="homecard" data-key="child" data-label="子ども"><span class="ico">👧</span><span>子ども</span></button>
-<button class="homecard" data-key="elder" data-label="高齢の方"><span class="ico">👴</span><span>高齢の方</span></button>
-<button class="homecard" data-key="mental" data-label="こころの不調"><span class="ico">♡</span><span>こころの不調</span></button>
-<button class="homecard" data-key="general" data-label="発熱・全身の不調"><span class="ico">🌡️</span><span>発熱・全身の不調</span></button>
-<button class="homecard" data-key="other" data-label="その他"><span class="ico">•••</span><span>その他</span></button>
+<button class="homecard" data-key="head" data-label="頭・顔"><span class="ico icon-head"></span><span>頭・顔</span></button>
+<button class="homecard" data-key="throat" data-label="のど・首"><span class="ico icon-throat"></span><span>のど・首</span></button>
+<button class="homecard" data-key="chest" data-label="胸・呼吸"><span class="ico icon-chest"></span><span>胸・呼吸</span></button>
+<button class="homecard" data-key="abdomen" data-label="おなか・消化器"><span class="ico icon-abdomen"></span><span>おなか・消化器</span></button>
+<button class="homecard" data-key="skin" data-label="皮膚"><span class="ico icon-skin"></span><span>皮膚</span></button>
+<button class="homecard" data-key="back" data-label="骨・関節・筋肉"><span class="ico icon-back"></span><span>骨・関節・筋肉</span></button>
+<button class="homecard" data-key="uro" data-label="泌尿器・生殖器"><span class="ico icon-uro"></span><span>泌尿器・生殖器</span></button>
+<button class="homecard" data-key="child" data-label="子ども"><span class="ico icon-child"></span><span>子ども</span></button>
+<button class="homecard" data-key="elder" data-label="高齢の方"><span class="ico icon-elder"></span><span>高齢の方</span></button>
+<button class="homecard" data-key="mental" data-label="こころの不調"><span class="ico icon-mental"></span><span>こころの不調</span></button>
+<button class="homecard" data-key="general" data-label="発熱・全身の不調"><span class="ico icon-general"></span><span>発熱・全身の不調</span></button>
+<button class="homecard" data-key="other" data-label="その他"><span class="ico icon-other"></span><span>その他</span></button>
 </div></section>
 <section id="flow" class="screen"><div class="flowhead"><button id="back">‹</button><div><small id="step"></small><h2 id="question"></h2></div></div><div class="progress"><i></i><i></i><i></i></div><div id="choices" class="choices"></div></section>
 <section id="result" class="screen result"><span class="tag">チェック結果</span><h2>考えられる原因</h2><div id="resultCard"></div><div class="care"><h3>受診の目安</h3><div id="urgency"></div></div><div class="care"><h3>何科に相談？</h3><p id="department"></p></div><p class="note">このサービスは診断を行うものではありません。症状が強い、急に悪化した、判断に迷う場合は医療機関へ相談してください。</p><button class="primary" onclick="location.reload()">もう一度チェックする</button></section>
 <section id="urgent" class="screen urgentpage"><span class="redtag">緊急症状</span><h2>次のような症状は<br>すぐに医療機関へ</h2><div class="alert">強い呼吸困難／意識がない・反応が悪い／突然の麻痺や言葉が出ない／激しい胸痛／止まらない大量出血／重いアレルギー症状など</div><p>生命に関わる可能性がある場合は、症状チェックを続けず救急要請を優先してください。</p><a class="call" href="tel:119">119に電話する</a><button class="backbtn" onclick="location.reload()">← 戻る</button></section>
-</main><script src="app.js?v=5"></script></body></html>
+</main><script src="app.js?v=6"></script></body></html>
